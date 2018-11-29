@@ -1,32 +1,31 @@
 package quyet.demo.spring.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import quyet.demo.spring.dao.CustomerDAO;
-import quyet.demo.spring.model.Customer;
+import quyet.demo.spring.model.Customer_old;
 
 import java.util.List;
 
 public class CustomerService {
     private CustomerDAO customerDAO;
 
-    public List<Customer> findAll() {
+    public List<Customer_old> findAll() {
         return customerDAO.findAll();
     }
 
-    public Customer findById(final int id) {
+    public Customer_old findById(final int id) {
         return customerDAO.findById(id);
     }
 
-    public void save(final Customer customer) {
+    public void save(final Customer_old customer) {
         customerDAO.save(customer);
     }
 
-    public void update(final Customer customer) {
+    public void update(final Customer_old customer) {
         customerDAO.update(customer);
     }
 
     public void delete(final int id) {
-        Customer customer = customerDAO.findById(id);
+        Customer_old customer = customerDAO.findById(id);
         if (customer != null) {
             customerDAO.delete(customer);
         }

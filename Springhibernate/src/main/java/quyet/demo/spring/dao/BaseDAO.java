@@ -1,17 +1,17 @@
 package quyet.demo.spring.dao;
 
-import quyet.demo.spring.model.Customer;
+import quyet.demo.spring.model.Customer_old;
 
 import java.util.List;
 
 public interface BaseDAO {
-    void save(Customer customer);
+    void save(Customer_old customer);
 
-    void update(Customer customer);
+    void update(Customer_old customer);
 
-    Customer findById(int id);
+    Customer_old findById(int id);
 
-    void delete(Customer customer);
+    void delete(Customer_old customer);
 
-    List<Customer> findAll();
+    List<Customer_old> findAll();
 }
