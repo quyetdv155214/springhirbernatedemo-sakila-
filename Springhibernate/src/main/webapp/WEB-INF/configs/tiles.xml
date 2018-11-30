@@ -11,24 +11,9 @@
 		<put-attribute name="footer" value="/views/layout/footer.jsp" />
 	</definition>
 
-	<!-- List Students -->
-	<definition name="home" extends="baseLayout">
-		<put-attribute name="title" value="HOME" />
-		<put-attribute name="body" value="/views/customer(old)/customer-list.jsp" />
-	</definition>
-	
-	<definition name="addCustomer" extends="baseLayout">
-		<put-attribute name="title" value="Add" />
-		<put-attribute name="body" value="/views/customer(old)/customer-save.jsp" />
-	</definition>
-	
-	<definition name="updateCustomer" extends="baseLayout">
+	<definition name="index" extends="baseLayout">
 		<put-attribute name="title" value="update" />
-		<put-attribute name="body" value="/views/customer(old)/customer-update.jsp" />
-	</definition>
-	<definition name="viewCustomer" extends="baseLayout">
-		<put-attribute name="title" value="update" />
-		<put-attribute name="body" value="/views/customer(old)/customer-view.jsp" />
+		<put-attribute name="body" value="/views/index.jsp" />
 	</definition>
 
 </tiles-definitions>

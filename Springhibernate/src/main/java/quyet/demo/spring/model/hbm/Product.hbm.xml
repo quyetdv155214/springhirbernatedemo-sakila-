@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="quyet.demo.spring.model">
+    <class name="Product" table="PRODUCT">
+        <id name="productId" column="product_id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="productName" type="string">
+            <column name="PRODUCT_NAME"/>
+        </property>
+
+        <property name="productCode" type="string">
+            <column name="PRODUCT_CODE"/>
+        </property>
+
+        <property name="productPrice" type="string">
+            <column name="PRODUCT_PRICE"/>
+        </property>
+
+        <property name="branchId" type="int">
+            <column name="BRANCH_ID"/>
+        </property>
+        <!--categories-->
+        <list name="categories" table="PRODUCT_CATEGORY" inverse="true">
+            <key>
+                <column name="PRODUCT_ID" not-null="true"/>
+            </key>
+            <list-index column="CATEGORY_ID"/>
+            <many-to-many class="Category">
+                <column name="CATEGORY_ID" not-null="true"/>
+            </many-to-many>
+        </list>
+
+
+    </class>
+</hibernate-mapping>

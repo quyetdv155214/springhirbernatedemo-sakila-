@@ -4,7 +4,20 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean name="customerDAO" class="quyet.demo.spring.dao.CustomerDAO">
+
+	<bean name="addressDAO" class="quyet.demo.spring.dao.impl.AddressDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+
+	<bean name="storeDAO" class="quyet.demo.spring.dao.impl.StoreDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+
+	<bean name="categoryDAO" class="quyet.demo.spring.dao.impl.CategoryDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+
+	<bean name="productDAO" class="quyet.demo.spring.dao.impl.ProductDAOImpl">
 		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
 </beans>
