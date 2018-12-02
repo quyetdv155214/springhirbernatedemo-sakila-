@@ -24,3 +24,7 @@ Springhibernate/.idea/workspace.xml
 Springhibernate/Springhibernate.iml
 Springhibernate/.idea/workspace.xml
 Springhibernate/Springhibernate.iml
+*.iml
+*.prefs
+Springhibernate/.project
+*.component

@@ -11,13 +11,13 @@ import java.util.List;
 
 @Controller
 public class HomeController {
-    @Autowired
-    private AddressService addressService;
+//    @Autowired
+//    private AddressService addressService;
 
     @RequestMapping(value={"/", "/customer-list"})
     public String home(Model model) {
-        List<Address> addressByStoreId = addressService.getAddressByStoreId(1);
-        model.addAttribute("addressByStoreId", addressByStoreId);
+//        List<Address> addressByStoreId = addressService.getAddressByStoreId(1);
+//        model.addAttribute("addressByStoreId", addressByStoreId);
         return "index";
 
     }

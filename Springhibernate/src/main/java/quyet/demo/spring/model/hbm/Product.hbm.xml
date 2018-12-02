@@ -27,7 +27,7 @@
             <key>
                 <column name="PRODUCT_ID" not-null="true"/>
             </key>
-            <list-index column="CATEGORY_ID"/>
+            <list-index column="idex"/>
             <many-to-many class="Category">
                 <column name="CATEGORY_ID" not-null="true"/>
             </many-to-many>
