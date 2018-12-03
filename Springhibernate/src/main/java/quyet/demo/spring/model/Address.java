@@ -3,27 +3,36 @@ package quyet.demo.spring.model;
 
 public class Address {
 
-  private long id;
-  private long storeId;
+  private int id;
+  private int storeId;
   private String country;
   private String capital;
   private String address;
+  private Store store;
+  
 
+  public Store getStore() {
+	return store;
+}
 
-  public long getId() {
+public void setStore(Store store) {
+	this.store = store;
+}
+
+public long getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
 
 
-  public long getStoreId() {
+  public int getStoreId() {
     return storeId;
   }
 
-  public void setStoreId(long storeId) {
+  public void setStoreId(int storeId) {
     this.storeId = storeId;
   }
 

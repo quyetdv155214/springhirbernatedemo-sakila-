@@ -15,7 +15,7 @@
             <column name="PRODUCT_CODE"/>
         </property>
 
-        <property name="productPrice" type="string">
+        <property name="productPrice" type="double">
             <column name="PRODUCT_PRICE"/>
         </property>
 

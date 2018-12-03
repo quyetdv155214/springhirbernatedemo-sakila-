@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Store {
 
-  private long storeId;
+  private int storeId;
   private String storeName;
   private List<Address> addresses;
   
@@ -21,7 +21,7 @@ public class Store {
     return storeId;
   }
 
-  public void setStoreId(long storeId) {
+  public void setStoreId(int storeId) {
     this.storeId = storeId;
   }
 
