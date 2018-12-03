@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 3, 2018 10:15:23 AM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="storedemo" dynamic-insert="false" dynamic-update="false" mutable="true" name="Address" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="address">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one class="Store" embed-xml="true" fetch="select" insert="true" name="store" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="store_id" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="country" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="country"/>
+        </property>
+        <property generated="never" lazy="false" name="capital" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="capital"/>
+        </property>
+        <property generated="never" lazy="false" name="address" optimistic-lock="true" type="string" unique="false">
+            <column length="200" name="address" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

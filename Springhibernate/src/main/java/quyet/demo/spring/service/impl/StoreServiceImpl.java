@@ -15,7 +15,7 @@ public class StoreServiceImpl implements StoreService {
     }
 
     public List<Store> getAllStore() {
-        return null;
+        return storeDAO.getAllStore();
     }
 
     public Store findById(Serializable key) {

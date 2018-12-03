@@ -12,9 +12,19 @@ public class Product {
   private long branchId;
 
   private List<Category> categories;
+  private List<Store> stores;
 
 
-  public void setCategories(List<Category> categories) {
+  
+  public List<Store> getStores() {
+	return stores;
+}
+
+public void setStores(List<Store> stores) {
+	this.stores = stores;
+}
+
+public void setCategories(List<Category> categories) {
     this.categories = categories;
   }
 

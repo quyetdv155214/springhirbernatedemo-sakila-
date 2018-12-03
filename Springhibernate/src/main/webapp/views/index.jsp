@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Quyet
@@ -11,6 +12,24 @@
     <title>Title</title>
 </head>
 <body>
-ahihi index ${addressByStoreId}
+ahihi index
+<table>
+    <tr>
+        <th>shop name</th>
+        <th>shop address</th>
+    </tr>
+    <c:forEach items="${listStore}" var="store">
+        <tr>
+            <td>${store.storeName}</td>
+            <td>
+                <c:forEach items="${store.addresses}" var="address">
+                    ${address.address}
+                </c:forEach>
+            </td>
+        </tr>
+    </c:forEach>
+</table>
+
+
 </body>
 </html>

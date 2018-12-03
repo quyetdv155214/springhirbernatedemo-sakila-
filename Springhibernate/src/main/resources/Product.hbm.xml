@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Dec 3, 2018 10:15:23 AM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="storedemo" dynamic-insert="false" dynamic-update="false" mutable="true" name="Product" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="product">
+        <id name="productId" type="java.lang.Integer">
+            <column name="product_id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="productName" optimistic-lock="true" type="string" unique="false">
+            <column length="100" name="product_name" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="productCode" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="product_code" not-null="true" unique="true"/>
+        </property>
+        <property generated="never" lazy="false" name="productPrice" optimistic-lock="true" type="double" unique="false">
+            <column name="product_price" not-null="true" precision="22" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="branchId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="branch_id"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="false" lazy="true" mutable="true" name="categories" optimistic-lock="true" sort="unsorted" table="product_category">
+            <key on-delete="noaction">
+                <column name="product_id" not-null="true"/>
+            </key>
+            <many-to-many embed-xml="true" entity-name="Category" not-found="exception" unique="false">
+                <column name="category_id" not-null="true"/>
+            </many-to-many>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="stores" optimistic-lock="true" sort="unsorted" table="store_product">
+            <key on-delete="noaction">
+                <column name="product_id" not-null="true"/>
+            </key>
+            <many-to-many embed-xml="true" entity-name="Store" not-found="exception" unique="false">
+                <column name="store_id" not-null="true"/>
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

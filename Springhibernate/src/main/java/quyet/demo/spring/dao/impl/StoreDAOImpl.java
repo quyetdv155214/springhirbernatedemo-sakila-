@@ -11,6 +11,8 @@ public class StoreDAOImpl extends GenericDAO<Integer, Store> implements StoreDAO
 
 
     public List<Store> getAllStore() {
-         return getSession().createQuery("From quyet.demo.spring.model.Store").list();
+    	List<Store> list= getSession().createQuery("From Store").list();
+    	System.out.println(list);
+         return list;
     }
 }

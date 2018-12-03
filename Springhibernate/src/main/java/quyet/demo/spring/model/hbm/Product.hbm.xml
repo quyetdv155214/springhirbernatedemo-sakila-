@@ -27,11 +27,21 @@
             <key>
                 <column name="PRODUCT_ID" not-null="true"/>
             </key>
-            <list-index column="idex"/>
+            <list-index column="category_id"/>
             <many-to-many class="Category">
                 <column name="CATEGORY_ID" not-null="true"/>
             </many-to-many>
         </list>
+        
+<!--         <list name="stores" table="store_product" fetch="select" inverse="true" lazy="true"> -->
+<!--             <key> -->
+<!--                 <column name="PRODUCT_ID" not-null="true"/> -->
+<!--             </key> -->
+<!--             <list-index column="id"/> -->
+<!--             <many-to-many class="Store"> -->
+<!--                 <column name="store_id" not-null="true"/> -->
+<!--             </many-to-many> -->
+<!--         </list> -->
 
 
     </class>

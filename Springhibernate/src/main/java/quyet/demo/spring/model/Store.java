@@ -8,7 +8,7 @@ public class Store {
   private long storeId;
   private String storeName;
   private List<Address> addresses;
-
+  
   public List<Address> getAddresses() {
     return addresses;
   }
