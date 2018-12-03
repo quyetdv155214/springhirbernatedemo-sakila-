@@ -12,19 +12,19 @@ public class AddressServiceImpl implements AddressService {
     private AddressDAO addressDAO;
 
     public List<Address> getAddressByStoreId(int storeId) {
-        return null;
+        return addressDAO.getAddressByStoreId(storeId);
     }
 
     public Address findById(Serializable key) {
-        return null;
+        return addressDAO.findById(key);
     }
 
     public Address saveOrUpdate(Address entity) {
-        return null;
+        return addressDAO.saveOrUpdate(entity);
     }
 
     public boolean delete(Address entity) {
-        return false;
+        return addressDAO.delete(entity);
     }
 
     public void setAddressDAO(AddressDAO addressDAO) {

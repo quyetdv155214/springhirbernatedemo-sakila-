@@ -17,22 +17,22 @@ public class ProductServiceImpl implements ProductService {
     }
 
     public Product findByCode(String code) {
-        return null;
+        return productDAO.findByCode(code);
     }
 
     public List<Product> getAllProduct() {
-        return null;
+        return productDAO.getAllProduct();
     }
 
     public Product findById(Serializable key) {
-        return null;
+        return productDAO.findById(key);
     }
 
     public Product saveOrUpdate(Product entity) {
-        return null;
+        return productDAO.saveOrUpdate(entity);
     }
 
     public boolean delete(Product entity) {
-        return false;
+        return productDAO.delete(entity);
     }
 }

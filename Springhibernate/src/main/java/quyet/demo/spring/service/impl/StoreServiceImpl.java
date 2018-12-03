@@ -19,14 +19,14 @@ public class StoreServiceImpl implements StoreService {
     }
 
     public Store findById(Serializable key) {
-        return null;
+        return storeDAO.findById(key);
     }
 
     public Store saveOrUpdate(Store entity) {
-        return null;
+        return storeDAO.saveOrUpdate(entity);
     }
 
     public boolean delete(Store entity) {
-        return false;
+        return storeDAO.delete(entity);
     }
 }

@@ -9,11 +9,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Home</title>
 </head>
 <body>
-ahihi index
-<table>
+
+<c:url value="/store/" var="view"/>
+<table border="1">
     <tr>
         <th>shop name</th>
         <th>shop address</th>
@@ -25,6 +26,9 @@ ahihi index
                 <c:forEach items="${store.addresses}" var="address">
                     ${address.address}
                 </c:forEach>
+            </td>
+            <td>
+            	<a href="${view }/${store.storeId}">view</a>
             </td>
         </tr>
     </c:forEach>

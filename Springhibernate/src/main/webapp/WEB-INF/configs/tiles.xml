@@ -5,15 +5,18 @@
 
 	<!-- Base Definition -->
 	<definition name="baseLayout" template="/views/layout/baseLayout.jsp">
-		<put-attribute name="title" value="" />
 		<put-attribute name="header" value="/views/layout/header.jsp" />
 		<put-attribute name="body" value="" />
 		<put-attribute name="footer" value="/views/layout/footer.jsp" />
 	</definition>
 
 	<definition name="index" extends="baseLayout">
-		<put-attribute name="title" value="update" />
+		<put-attribute name="title" value="Home" />
 		<put-attribute name="body" value="/views/index.jsp" />
+	</definition>
+
+	<definition name="store" extends="baseLayout">
+		<put-attribute name="body" value="/views/store.jsp" />
 	</definition>
 
 </tiles-definitions>

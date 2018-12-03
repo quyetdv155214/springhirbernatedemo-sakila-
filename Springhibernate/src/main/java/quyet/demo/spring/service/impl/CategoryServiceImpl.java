@@ -16,18 +16,18 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     public List<Category> getAllCategory() {
-        return null;
+        return categoryDAO.getAllCategory();
     }
 
     public Category findById(Serializable key) {
-        return null;
+        return categoryDAO.findById(key);
     }
 
     public Category saveOrUpdate(Category entity) {
-        return null;
+        return categoryDAO.saveOrUpdate(entity);
     }
 
     public boolean delete(Category entity) {
-        return false;
+        return categoryDAO.delete(entity);
     }
 }

@@ -17,7 +17,7 @@ public class Store {
     this.addresses = addresses;
   }
 
-  public long getStoreId() {
+  public int getStoreId() {
     return storeId;
   }
 

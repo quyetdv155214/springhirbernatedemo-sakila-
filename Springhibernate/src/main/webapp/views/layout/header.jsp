@@ -12,7 +12,7 @@
 		</div>
 		<div id="navbar">
 			<ul class="nav navbar-nav navbar-right">
-				aldjfalksdfhalkdsjf
+
 			</ul>
 		</div>
 	</div>
