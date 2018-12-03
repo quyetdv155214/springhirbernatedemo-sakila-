@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Product {
 
-  private long productId;
+  private int productId;
   private String productName;
   private String productCode;
   private double productPrice;
-  private long branchId;
+  private int branchId;
 
   private List<Category> categories;
   private List<Store> stores;
@@ -36,7 +36,7 @@ public void setCategories(List<Category> categories) {
     return productId;
   }
 
-  public void setProductId(long productId) {
+  public void setProductId(int productId) {
     this.productId = productId;
   }
 
@@ -68,11 +68,11 @@ public void setCategories(List<Category> categories) {
   }
 
 
-  public long getBranchId() {
+  public int getBranchId() {
     return branchId;
   }
 
-  public void setBranchId(long branchId) {
+  public void setBranchId(int branchId) {
     this.branchId = branchId;
   }
 

@@ -15,7 +15,7 @@
             <column name="PRODUCT_CODE"/>
         </property>
 
-        <property name="productPrice" type="string">
+        <property name="productPrice" type="double">
             <column name="PRODUCT_PRICE"/>
         </property>
 
@@ -33,15 +33,15 @@
             </many-to-many>
         </list>
         
-<!--         <list name="stores" table="store_product" fetch="select" inverse="true" lazy="true"> -->
-<!--             <key> -->
-<!--                 <column name="PRODUCT_ID" not-null="true"/> -->
-<!--             </key> -->
-<!--             <list-index column="id"/> -->
-<!--             <many-to-many class="Store"> -->
-<!--                 <column name="store_id" not-null="true"/> -->
-<!--             </many-to-many> -->
-<!--         </list> -->
+        <list name="stores" table="store_product" fetch="select" inverse="true" lazy="true">
+            <key>
+                <column name="PRODUCT_ID" not-null="true"/>
+            </key>
+            <list-index column="id"/>
+            <many-to-many class="Store">
+                <column name="store_id" not-null="true"/>
+            </many-to-many>
+        </list>
 
 
     </class>
