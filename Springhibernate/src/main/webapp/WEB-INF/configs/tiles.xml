@@ -19,4 +19,9 @@
 		<put-attribute name="body" value="/views/store.jsp" />
 	</definition>
 
+
+	<definition name="add" extends="baseLayout">
+		<put-attribute name="body" value="/views/addProduct.jsp" />
+	</definition>
+
 </tiles-definitions>

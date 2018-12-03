@@ -10,12 +10,36 @@
 <html>
 <head>
     <c:set var="store" value="${store}" scope="session"/>
+    <%--<c:set var="products" value="${products}" scope="session"/>--%>
 
-    <title>${store.storeName}</title>
+    <c:url var="addProduct" value="/add"/>
+    <title></title>
 </head>
 <body>
-    ${store.storeName}
+<h1>${store.storeName}</h1>
 
+<%--<c:if test="${empty products}">--%>
+    <%--<h1>empty</h1>--%>
+<%--</c:if>--%>
+<%--<c:if test="${empty store.products}">--%>
+    <%--<h1>empty in store</h1>--%>
+<%--</c:if>--%>
+<table border="1">
+    <tr>
+        <th> product code</th>
+        <th> product name</th>
+        <th> product price</th>
+        <th> branch</th>
+    </tr>
+    <%--<c:forEach items="${products}" var="product">--%>
+        <%--<tr>--%>
+            <%--<td>${product.productCode}</td>--%>
+            <%--<td>${product.productName}</td>--%>
+            <%--<td>${product.productPrice}</td>--%>
+        <%--</tr>--%>
+    <%--</c:forEach>--%>
+</table>
+<h1><a href="${addProduct}">Add Product</a></h1>
 
 </body>
 </html>
