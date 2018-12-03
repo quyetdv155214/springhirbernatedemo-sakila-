@@ -42,7 +42,7 @@
                 <column name="store_id" not-null="true"/>
             </many-to-many>
         </list>
-<!--         as -->
+<!--         aasds -->
 
 
     </class>
